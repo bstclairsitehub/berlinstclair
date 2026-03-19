@@ -33,6 +33,14 @@ export async function POST(req: NextRequest) {
   const ext = file.name.split('.').pop() ?? 'jpg'
   const filename = `articles/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`
 
-  const blob = await put(filename, file, { access: 'public' })
-  return NextResponse.json({ url: blob.url })
+  try {
+    const blob = await put(filename, file, { access: 'public' })
+    return NextResponse.json({ url: blob.url })
+  } catch (err) {
+    console.error('Blob upload error:', err)
+    return NextResponse.json(
+      { error: err instanceof Error ? err.message : 'Upload failed — check BLOB_READ_WRITE_TOKEN' },
+      { status: 500 }
+    )
+  }
 }

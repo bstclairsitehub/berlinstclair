@@ -88,7 +88,10 @@ export default function Footer() {
 
         {/* Bottom accent line */}
         <div className="mt-10 pt-6 border-t border-dp-border">
-          <div className="h-1 w-24 bg-gradient-to-r from-dp-gold to-dp-red mx-auto" />
+          <div className="h-1 w-24 bg-gradient-to-r from-dp-gold to-dp-red mx-auto mb-4" />
+          <p className="text-center font-sans text-[0.65rem] text-dp-text-muted tracking-widest uppercase">
+            Designed &amp; Developed by St. Clair Design Co.
+          </p>
         </div>
       </div>
     </footer>

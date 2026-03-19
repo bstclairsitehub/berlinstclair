@@ -7,6 +7,7 @@ import ArticleBody from '@/components/article/ArticleBody'
 import PageFlipReader from '@/components/article/PageFlipReader'
 import ArticleCard from '@/components/home/ArticleCard'
 import SchemaMarkup from '@/components/ui/SchemaMarkup'
+import AuthorSignature from '@/components/article/AuthorSignature'
 
 interface ArticlePageProps {
   params: Promise<{ slug: string }>
@@ -100,6 +101,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         {/* 3D Page Flip Reader */}
         <div className="max-w-screen-md mx-auto">
           <PageFlipReader pages={flipPages} />
+        </div>
+
+        {/* Author signature sign-off */}
+        <div className="max-w-screen-md mx-auto">
+          <AuthorSignature />
         </div>
 
         {/* Tags */}
