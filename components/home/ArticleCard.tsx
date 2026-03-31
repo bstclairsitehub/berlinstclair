@@ -39,18 +39,18 @@ function AuthorMeta({ post }: { post: PostWithRelations }) {
 /* ── HERO: large image + big headline ──────────────────────── */
 function HeroCard({ post }: { post: PostWithRelations }) {
   return (
-    <article className="group">
+    <article className="group article-card-wrapper">
       <CategoryLabel name={post.category.name} slug={post.category.slug} />
 
       <Link href={`/article/${post.slug}`} className="block mt-2">
         {post.heroImage && (
-          <div className="relative w-full aspect-[16/9] overflow-hidden mb-4">
+          <div className="relative w-full aspect-[16/9] overflow-hidden mb-4 border border-dp-border-light/20 group-hover:border-dp-gold/30 transition-colors duration-500">
             <Image
               src={post.heroImage}
               alt={post.title}
               fill
               sizes="(max-width: 768px) 100vw, 60vw"
-              className="object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+              className="object-cover group-hover:scale-[1.05] transition-transform duration-700 ease-out"
               priority
             />
           </div>
@@ -75,18 +75,18 @@ function HeroCard({ post }: { post: PostWithRelations }) {
 /* ── STANDARD: image + medium headline ─────────────────────── */
 function StandardCard({ post }: { post: PostWithRelations }) {
   return (
-    <article className="group">
+    <article className="group article-card-wrapper">
       <CategoryLabel name={post.category.name} slug={post.category.slug} />
 
       <Link href={`/article/${post.slug}`} className="block mt-1.5">
         {post.heroImage && (
-          <div className="relative w-full aspect-[4/3] overflow-hidden mb-3">
+          <div className="relative w-full aspect-[4/3] overflow-hidden mb-3 border border-dp-border-light/20 group-hover:border-dp-gold/30 transition-colors duration-500">
             <Image
               src={post.heroImage}
               alt={post.title}
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
-              className="object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+              className="object-cover group-hover:scale-[1.05] transition-transform duration-700 ease-out"
             />
           </div>
         )}
@@ -110,11 +110,11 @@ function StandardCard({ post }: { post: PostWithRelations }) {
 /* ── COMPACT: text only, tight spacing ─────────────────────── */
 function CompactCard({ post }: { post: PostWithRelations }) {
   return (
-    <article className="group py-1">
+    <article className="group py-1 article-card-wrapper transition-all duration-300">
       <CategoryLabel name={post.category.name} slug={post.category.slug} />
 
       <Link href={`/article/${post.slug}`} className="block mt-1">
-        <h3 className="font-headline text-base text-dp-text leading-snug tracking-tight group-hover:underline decoration-1 underline-offset-2">
+        <h3 className="font-headline text-base text-dp-text leading-snug tracking-tight group-hover:underline decoration-1 underline-offset-2 group-hover:text-dp-gold transition-colors duration-300">
           {post.title}
         </h3>
 
@@ -133,16 +133,16 @@ function CompactCard({ post }: { post: PostWithRelations }) {
 /* ── SIDE: horizontal thumbnail + compact text ─────────────── */
 function SideCard({ post }: { post: PostWithRelations }) {
   return (
-    <article className="group py-1">
+    <article className="group py-1 article-card-wrapper">
       <Link href={`/article/${post.slug}`} className="flex gap-4">
         {post.heroImage && (
-          <div className="relative w-24 h-20 flex-shrink-0 overflow-hidden">
+          <div className="relative w-24 h-20 flex-shrink-0 overflow-hidden border border-dp-border-light/20 group-hover:border-dp-gold/30 transition-colors duration-500">
             <Image
               src={post.heroImage}
               alt={post.title}
               fill
               sizes="96px"
-              className="object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+              className="object-cover group-hover:scale-[1.05] transition-transform duration-700 ease-out"
             />
           </div>
         )}
@@ -152,7 +152,7 @@ function SideCard({ post }: { post: PostWithRelations }) {
             {post.category.name}
           </span>
 
-          <h3 className="font-headline text-sm text-dp-text leading-snug tracking-tight group-hover:underline decoration-1 underline-offset-2 line-clamp-3 mt-0.5">
+          <h3 className="font-headline text-sm text-dp-text leading-snug tracking-tight group-hover:underline decoration-1 underline-offset-2 line-clamp-3 mt-0.5 group-hover:text-dp-gold transition-colors duration-300">
             {post.title}
           </h3>
 

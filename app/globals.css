@@ -188,6 +188,57 @@ html {
   }
 }
 
+/* Fade up animation for staggered scroll reveals */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =============================================
+   SCROLL REVEAL CLASSES
+   ============================================= */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade up utilities with staggered delays */
+.fade-up {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.fade-up-delay-1 {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+  opacity: 0;
+}
+
+.fade-up-delay-2 {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+  opacity: 0;
+}
+
+.fade-up-delay-3 {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  opacity: 0;
+}
+
+.fade-up-delay-4 {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+  opacity: 0;
+}
+
 /* =============================================
    LINK HOVER STATES
    ============================================= */
@@ -200,8 +251,31 @@ a {
    ============================================= */
 .section-divider {
   @apply border-t-2 border-dp-border-light my-8 md:my-12;
+  transform-origin: left;
+  animation: slideInX 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .section-label {
   @apply font-sans text-xs uppercase tracking-widest font-semibold text-dp-text-muted;
+}
+
+/* =============================================
+   ARTICLE CARD ENHANCEMENTS
+   ============================================= */
+article {
+  transition: all 0.3s ease;
+}
+
+article:hover {
+  transform: translateY(-2px);
+}
+
+/* Enhanced article card with depth on hover */
+.article-card-wrapper {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.article-card-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }

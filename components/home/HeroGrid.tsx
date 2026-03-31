@@ -13,14 +13,14 @@ interface HeroGridProps {
 /* ── Section Label ─────────────────────────────────────────── */
 function SectionLabel({ title, href }: { title: string; href: string }) {
   return (
-    <div className="flex items-center gap-4 mb-6">
+    <div className="flex items-center gap-4 mb-6 scroll-reveal">
       <Link
         href={href}
-        className="font-sans text-xs uppercase tracking-[0.2em] font-semibold text-dp-gold hover:text-dp-text transition-colors whitespace-nowrap"
+        className="font-sans text-xs uppercase tracking-[0.2em] font-semibold text-dp-gold hover:text-dp-text transition-colors duration-300 whitespace-nowrap"
       >
         {title}
       </Link>
-      <div className="flex-1 border-t border-dp-border" />
+      <div className="flex-1 border-t border-dp-border section-divider" />
     </div>
   );
 }
@@ -141,7 +141,7 @@ export default function HeroGrid({ posts, categories }: HeroGridProps) {
           return (
             <section
               key={slug}
-              className="py-10 md:py-14 border-t border-dp-border"
+              className="py-10 md:py-14 border-t border-dp-border scroll-reveal"
             >
               <SectionLabel
                 title={sectionLabels[slug] || slug}
@@ -195,7 +195,7 @@ export default function HeroGrid({ posts, categories }: HeroGridProps) {
 
         {/* ── Uncategorized / overflow posts ────────────── */}
         {uncategorized.length > 0 && (
-          <section className="py-10 md:py-14 border-t border-dp-border">
+          <section className="py-10 md:py-14 border-t border-dp-border scroll-reveal">
             <SectionLabel title="More Stories" href="/" />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 divide-y md:divide-y-0 divide-dp-border">
               {uncategorized.slice(0, 6).map((post, index) => (

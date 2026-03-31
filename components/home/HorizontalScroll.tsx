@@ -52,12 +52,12 @@ export default function HorizontalScroll({ posts }: HorizontalScrollProps) {
   return (
     <section className="w-full bg-dp-bg">
       {/* Section header - outside the pin container */}
-      <div className="max-w-screen-xl mx-auto px-4 pt-10 pb-6 border-t border-dp-border">
+      <div className="max-w-screen-xl mx-auto px-4 pt-10 pb-6 border-t border-dp-border scroll-reveal">
         <div className="flex items-center gap-4">
           <span className="font-sans text-xs uppercase tracking-[0.2em] font-semibold text-dp-gold whitespace-nowrap">
             Trending Stories
           </span>
-          <div className="flex-1 border-t border-dp-border" />
+          <div className="flex-1 border-t border-dp-border section-divider" />
           <span className="font-body text-xs text-dp-text-muted italic hidden sm:block">
             Scroll to explore
           </span>

@@ -37,7 +37,7 @@ export default async function Header() {
           {/* Publication name - center */}
           <div className="absolute left-1/2 -translate-x-1/2">
             <Link href="/" className="block">
-              <h1 className="font-masthead text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-dp-text leading-none tracking-normal hover:opacity-80 transition-opacity">
+              <h1 className="font-masthead text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-dp-text leading-none tracking-normal hover:opacity-80 transition-opacity duration-300">
                 The Daily Gay
               </h1>
             </Link>
@@ -52,7 +52,7 @@ export default async function Header() {
                 </span>
                 <Link
                   href="/admin"
-                  className="hidden sm:inline-block uppercase tracking-widest text-xs font-semibold text-dp-text hover:text-dp-blue transition-colors border border-dp-border px-3 py-1.5 hover:border-dp-blue"
+                  className="hidden sm:inline-block uppercase tracking-widest text-xs font-semibold text-dp-text hover:text-dp-blue transition-all duration-300 border border-dp-border px-3 py-1.5 hover:border-dp-blue"
                 >
                   Dashboard
                 </Link>
@@ -64,7 +64,7 @@ export default async function Header() {
                 >
                   <button
                     type="submit"
-                    className="uppercase tracking-widest text-xs font-semibold text-dp-text-muted hover:text-dp-red transition-colors"
+                    className="uppercase tracking-widest text-xs font-semibold text-dp-text-muted hover:text-dp-red transition-all duration-300"
                   >
                     Sign Out
                   </button>
@@ -74,13 +74,13 @@ export default async function Header() {
               <div className="flex items-center gap-3">
                 <Link
                   href="/admin/login"
-                  className="uppercase tracking-widest text-xs font-semibold text-dp-text-secondary hover:text-dp-text transition-colors"
+                  className="uppercase tracking-widest text-xs font-semibold text-dp-text-secondary hover:text-dp-text transition-all duration-300"
                 >
                   Log In
                 </Link>
                 <Link
                   href="/subscribe"
-                  className="uppercase tracking-widest text-xs font-semibold bg-dp-gold text-dp-bg px-4 py-1.5 hover:bg-dp-gold/90 transition-colors rounded-sm"
+                  className="uppercase tracking-widest text-xs font-semibold bg-dp-gold text-dp-bg px-4 py-1.5 hover:bg-dp-gold/90 transition-all duration-300 rounded-sm hover:shadow-lg"
                 >
                   Subscribe
                 </Link>

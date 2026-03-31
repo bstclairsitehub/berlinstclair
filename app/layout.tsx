@@ -69,9 +69,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://berlinstclair.com',
   },
-  verification: {
-    google: 'google-site-verification=YOUR_GOOGLE_VERIFICATION_CODE',
-  },
+  // verification: {
+  //   google: 'YOUR_GOOGLE_VERIFICATION_CODE',
+  // },
 }
 
 export default async function RootLayout({

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import HeroGrid from '@/components/home/HeroGrid'
 import HorizontalScroll from '@/components/home/HorizontalScroll'
 import HomeTagline from '@/components/home/HomeTagline'
+import ScrollRevealClient from '@/components/home/ScrollRevealClient'
 import { getPublishedPosts, getCategories } from '@/lib/actions/articles'
 
 export const metadata: Metadata = {
@@ -37,6 +38,9 @@ export default async function HomePage() {
         <div className="border-t border-dp-border-light mt-4 mb-2" />
         <div className="border-t border-dp-border" />
       </div>
+
+      {/* Initialize scroll reveal observer */}
+      <ScrollRevealClient />
     </div>
   )
 }
