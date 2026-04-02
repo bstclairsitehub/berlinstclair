@@ -55,27 +55,27 @@ function FeaturedHero({ post }: { post: PostWithRelations }) {
             {/* Category */}
             <Link
               href={`/section/${post.category.slug}`}
-              className="inline-block font-sans text-xs uppercase tracking-[0.2em] font-semibold text-dp-red hover:text-dp-text transition-colors mb-3"
+              className="inline-block font-sans text-xs uppercase tracking-[0.2em] font-semibold text-dp-red hover:text-dp-text transition-colors mb-3 hero-entrance"
             >
               {post.category.name}
             </Link>
 
             {/* Headline */}
             <Link href={`/article/${post.slug}`} className="block group">
-              <h2 className="font-headline text-3xl md:text-5xl lg:text-6xl text-dp-text leading-[1.1] tracking-tight mb-4 group-hover:underline decoration-1 underline-offset-4 max-w-4xl">
+              <h2 className="font-headline text-3xl md:text-5xl lg:text-6xl text-dp-text leading-[1.1] tracking-tight mb-4 group-hover:underline decoration-1 underline-offset-4 max-w-4xl hero-entrance-delay-1">
                 {post.title}
               </h2>
             </Link>
 
             {/* Excerpt */}
             {post.excerpt && (
-              <p className="font-body text-base md:text-lg text-dp-text-secondary leading-relaxed mb-4 max-w-2xl">
+              <p className="font-body text-base md:text-lg text-dp-text-secondary leading-relaxed mb-4 max-w-2xl hero-entrance-delay-2">
                 {truncate(post.excerpt, 180)}
               </p>
             )}
 
             {/* Byline */}
-            <div className="flex items-center gap-3 font-sans text-xs text-dp-text-muted">
+            <div className="flex items-center gap-3 font-sans text-xs text-dp-text-muted hero-entrance-delay-1">
               {post.author.name && (
                 <>
                   <span className="uppercase tracking-wide">By {post.author.name}</span>
@@ -141,7 +141,9 @@ export default function HeroGrid({ posts, categories }: HeroGridProps) {
           return (
             <section
               key={slug}
-              className="py-10 md:py-14 border-t border-dp-border scroll-reveal"
+              className={`py-10 md:py-14 border-t border-dp-border scroll-reveal ${
+                isEven ? 'bg-dp-elevated/40' : ''
+              }`}
             >
               <SectionLabel
                 title={sectionLabels[slug] || slug}
@@ -195,7 +197,7 @@ export default function HeroGrid({ posts, categories }: HeroGridProps) {
 
         {/* ── Uncategorized / overflow posts ────────────── */}
         {uncategorized.length > 0 && (
-          <section className="py-10 md:py-14 border-t border-dp-border scroll-reveal">
+          <section className="py-10 md:py-14 border-t border-dp-border scroll-reveal bg-dp-elevated/40">
             <SectionLabel title="More Stories" href="/" />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 divide-y md:divide-y-0 divide-dp-border">
               {uncategorized.slice(0, 6).map((post, index) => (

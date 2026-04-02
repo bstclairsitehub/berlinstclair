@@ -35,7 +35,7 @@ function CoverPage() {
       <div className="w-full border-t-2 border-white mb-1" />
       <div className="w-full border-t border-white mb-10" />
 
-      <p className="font-sans text-xs uppercase tracking-widest text-white/50 mb-3">
+      <p className="font-sans text-xs uppercase tracking-widest text-white/70 mb-3">
         Special Edition
       </p>
 
@@ -43,11 +43,11 @@ function CoverPage() {
         The Daily Gay
       </h1>
 
-      <div className="w-12 border-t border-white/30 my-5" />
+      <div className="w-12 border-t border-white/70 my-5" />
 
-      <p className="font-body text-sm italic text-white/60 text-center mb-6">{today}</p>
+      <p className="font-body text-sm italic text-white/75 text-center mb-6">{today}</p>
 
-      <p className="font-body text-xs text-white/40 text-center uppercase tracking-widest">
+      <p className="font-body text-xs text-white/70 text-center uppercase tracking-widest">
         All the News That&rsquo;s Fit to Read
       </p>
 
@@ -117,8 +117,8 @@ function BackCover() {
       <div className="w-full border-t-2 border-white mb-1" />
       <div className="w-full border-t border-white mb-10" />
       <span className="font-masthead text-5xl text-white">The Daily Gay</span>
-      <div className="w-12 border-t border-white/30 my-5" />
-      <p className="font-body italic text-white/50 text-sm text-center">
+      <div className="w-12 border-t border-white/70 my-5" />
+      <p className="font-body italic text-white/70 text-sm text-center">
         Quality journalism for a better&#x2011;informed world.
       </p>
       <div className="w-full border-t border-white mt-10 mb-1" />

@@ -101,7 +101,7 @@ export default function HorizontalScroll({ posts }: HorizontalScrollProps) {
                 )}
 
                 {/* Panel number indicator */}
-                <div className="absolute top-6 right-8 font-sans text-white/50 text-sm tracking-widest">
+                <div className="absolute top-6 right-8 font-sans text-white/70 text-sm tracking-widest">
                   {String(index + 1).padStart(2, '0')} / {String(posts.length).padStart(2, '0')}
                 </div>
 
@@ -130,11 +130,11 @@ export default function HorizontalScroll({ posts }: HorizontalScrollProps) {
                   )}
 
                   {/* Byline */}
-                  <div className="flex items-center gap-3 font-sans text-xs text-white/60">
+                  <div className="flex items-center gap-3 font-sans text-xs text-white/75">
                     {post.author.name && (
                       <>
                         <span>By {post.author.name}</span>
-                        <span className="text-white/30">|</span>
+                        <span className="text-white/70">|</span>
                       </>
                     )}
                     <time dateTime={date.toISOString()}>{formatDate(date)}</time>
@@ -143,7 +143,7 @@ export default function HorizontalScroll({ posts }: HorizontalScrollProps) {
 
                 {/* Scroll hint on first panel */}
                 {index === 0 && (
-                  <div className="absolute bottom-8 right-8 flex items-center gap-2 font-sans text-xs text-white/50 uppercase tracking-widest animate-pulse">
+                  <div className="absolute bottom-8 right-8 flex items-center gap-2 font-sans text-xs text-white/70 uppercase tracking-widest animate-pulse">
                     <span>Scroll</span>
                     <svg
                       className="w-4 h-4"

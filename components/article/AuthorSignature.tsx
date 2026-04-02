@@ -1,8 +1,6 @@
-import Image from 'next/image'
-
 /**
  * Author signature sign-off displayed at the bottom of every article.
- * Uses the white-on-transparent version for the dark theme.
+ * Uses an elegant cursive font style for the signature.
  */
 export default function AuthorSignature() {
   return (
@@ -14,20 +12,15 @@ export default function AuthorSignature() {
         <div className="flex-1 border-t border-dp-border" />
       </div>
 
-      {/* Signature image */}
-      <div className="flex justify-center">
-        <Image
-          src="/images/signature-white.png"
-          alt="Berlin Madox St. Clair"
-          width={320}
-          height={100}
-          className="opacity-90 select-none pointer-events-none"
-          style={{ objectFit: 'contain' }}
-        />
+      {/* Signature text */}
+      <div className="flex justify-center mb-4">
+        <p className="text-center font-serif text-2xl italic opacity-80 select-none pointer-events-none text-dp-text-muted">
+          Berlin St. Clair
+        </p>
       </div>
 
       {/* Subtle byline */}
-      <p className="text-center font-sans text-xs uppercase tracking-[0.3em] text-dp-text-muted mt-4">
+      <p className="text-center font-sans text-xs uppercase tracking-[0.3em] text-dp-text-muted">
         Berlin Madox St. Clair
       </p>
     </div>

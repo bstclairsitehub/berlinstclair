@@ -239,6 +239,32 @@ html {
   opacity: 0;
 }
 
+/* Hero entrance animation */
+@keyframes heroEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-entrance {
+  animation: heroEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-entrance-delay-1 {
+  animation: heroEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+  opacity: 0;
+}
+
+.hero-entrance-delay-2 {
+  animation: heroEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+  opacity: 0;
+}
+
 /* =============================================
    LINK HOVER STATES
    ============================================= */
